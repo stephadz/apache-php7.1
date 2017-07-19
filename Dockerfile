@@ -5,6 +5,6 @@ RUN pecl install mongodb \
     && pecl install apcu \
     && docker-php-ext-enable mongodb redis apcu
 
-RUN docker-php-ext-install gd mbstring opcache pdo pdo_mysql zip
+RUN docker-php-ext-install gd mbstring opcache pdo pdo_mysql zip bcmath
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
