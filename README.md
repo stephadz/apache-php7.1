@@ -1,29 +1,31 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+FROM php:7.1-apache
 
-### What is this repository for? ###
+### Enabled extensions ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+gd 
+mbstring 
+opcache 
+pdo 
+pdo_mysql 
+zip
+bcmath 
+intl
+mongodb 
+redis 
+apcu 
+memcached
 
-### How do I get set up? ###
+### tools ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+composer (installed at /usr/local/bin)
 
-### Contribution guidelines ###
+### php.ini custom ###
 
-* Writing tests
-* Code review
-* Other guidelines
+memory_limit = 512M
+upload_max_filesize = 64M
+post_max_size = 64M
+max_execution_time = 600
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
