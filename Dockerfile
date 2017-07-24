@@ -8,3 +8,5 @@ RUN pecl install mongodb \
 RUN docker-php-ext-install gd mbstring opcache pdo pdo_mysql zip bcmath intl
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+COPY config/php.ini /usr/local/etc/php/
